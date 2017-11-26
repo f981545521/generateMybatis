@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="test">
+	<!-- id:要求唯一
+		 parameterType:参数类型,填写实体类的完整名字.
+		 SQL语句中:#{类的属性名}
+		 
+		 CREATE TABLE `t_emp` (
+			  `id` int(11) NOT NULL AUTO_INCREMENT,
+			  `name` varchar(32) DEFAULT NULL,
+			  `age` int(11) DEFAULT NULL,
+			  PRIMARY KEY (`id`)
+			) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
+	  -->
+	<insert id="save" parameterType="entity.Employee">
+		insert into t_emp values(default,#{name},#{age})
+	</insert>
+</mapper>
