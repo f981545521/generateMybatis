@@ -1,4 +1,4 @@
 # generateMybatis
 
-- mybatis-generator实践
-- TKmybatis演示
+- `mybatis-generator`实践
+- `TKmybatis`演示
